@@ -7,8 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>ETCH A SKETCH</h1>
+    <div class="container">
+        <div class="controls">
+            <div class="size-color">
+                <label for="gridSize">Grid Size: <span id="gridValue">16</span></label>
+                <input type="range" id="gridSize" min="1" max="100" value="16">
+                <button id="createBtn">Create Grid</button>
+                <br>
+                <label for="colorPicker">Color picker: </label>
+                <input type="color" id="colorPicker"> 
+            </div>
 
+            <div class="erase-help">
+                <div class="erase">
+                    <button id="clearBtn">Clear grid</button>
+                </div>
+
+                <div class="help">
+                    <button id="helpBtn">Help ?</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="drawing-pad">
+
+        </div>
+    </div>
+
+    <!-- <footer>
+    <p>© 2026 Sagar Pawar</p>
+
+    <a href="https://github.com/sagarpawar-dev"
+       target="_blank"
+       class="github-link">
+
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        alt="GitHub">GitHub
+    </a>
+    </footer> -->
 
 
     <script src="script.js"></script>
