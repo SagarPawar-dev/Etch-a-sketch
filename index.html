@@ -11,12 +11,16 @@
     <div class="container">
         <div class="controls">
             <div class="size-color">
-                <label for="gridSize">Grid Size: <span id="gridValue">16</span></label>
-                <input type="range" id="gridSize" min="1" max="100" value="16">
-                <button id="createBtn">Create Grid</button>
-                <br>
-                <label for="colorPicker">Color picker: </label>
-                <input type="color" id="colorPicker"> 
+                <div class="scroll">
+                    <label for="gridSize">Grid Size: <span id="gridValue">16</span></label>
+                    <input type="range" id="gridSize" min="1" max="100" value="16">
+                    <button id="createBtn">Create Grid</button>
+                </div>
+                
+                <div class="color">
+                    <label for="colorPicker">Color picker: </label>
+                    <input type="color" id="colorPicker"> 
+                </div>    
             </div>
 
             <div class="erase-help">
