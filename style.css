@@ -92,6 +92,11 @@ button{
     background-color: white;
     border: 2px solid black;
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-content: flex-start;
+    cursor: crosshair;
 }
 
 button:hover{
@@ -102,7 +107,98 @@ button:hover{
 #createBtn { background-color: #1a73e8; color: white; }
 #clearBtn  { background-color: #e53935; color: white; }
 #eraserBtn { background-color: #f9a825; color: #1a1a1a; }
+#randomBtn{
+    background: linear-gradient(90deg, #e53935, #f9a825, #43a047, #1a73e8, #9c27b0);
+    color: white;
+}
 
 #createBtn:hover { background-color: #1558b0; }
 #clearBtn:hover  { background-color: #b71c1c; }
 #eraserBtn:hover { background-color: #f57f17; }
+#randomBtn:hover{ background-color: #6a1b9a;}
+
+footer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.github-link{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-link img{
+    width: 24px;
+    height: 24px;
+}
+
+.github-link:hover{
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .size-color {
+        align-items: center;
+        width: 100%;
+    }
+
+    .erase-help {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    button {
+        min-width: 90px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .drawing-pad {
+        height: 400px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .scroll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .color {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #gridSize {
+        width: 150px;
+    }
+}
