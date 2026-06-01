@@ -78,7 +78,7 @@ drawingPad.addEventListener("mouseleave", ()=> isDrawing=false);
 drawingPad.addEventListener("touchstart",()=> isDrawing= true);
 drawingPad.addEventListener("touchend",()=> isDrawing= false);
 drawingPad.addEventListener("touchcancel",()=> isDrawing= false);
-drawingPad.addEventListener("touchmove",touchdraw);
+drawingPad.addEventListener("touchmove",drawTouch);
 
 
 
