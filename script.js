@@ -39,7 +39,8 @@ function createGrid(){
 
         box.addEventListener("mouseover", draw);
         box.addEventListener("click", draw);
-        box.addEventListener("touchmove", draw);
+        box.addEventListener("touchmove", drawTouch);
+
 
         drawingPad.appendChild(box);
     }
@@ -72,6 +73,11 @@ drawingPad.addEventListener("mousedown", ()=> isDrawing=true);
 drawingPad.addEventListener("mouseup", ()=> isDrawing=false);
 drawingPad.addEventListener("mouseleave", ()=> isDrawing=false);
 
+// drawing pad touch drawing
+
+drawingPad.addEventListener("touchstart",()=> isDrawing= true);
+drawingPad.addEventListener("touchend",()=> isDrawing= false);
+
 function getRandomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -82,4 +88,15 @@ function getRandomColor() {
 function draw(e){
     if(e.type ==="mouseover" && !isDrawing) return;
     e.target.style.backgroundColor = isRandom ? getRandomColor() : currentColor;
+}
+
+function drawTouch(e) {
+    e.preventDefault(); 
+    
+    const touch = e.touches[0]; 
+    const element = document.elementFromPoint(touch.clientX, touch.clientY);
+    
+    if (element && element.classList.contains("square")) {
+        element.style.backgroundColor = isRandom ? getRandomColor() : currentColor;
+    }
 }
